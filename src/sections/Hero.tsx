@@ -154,64 +154,55 @@ export default function Hero() {
         >
           {/* Responsive Scale Wrapper for Mobile */}
           <div className="scale-75 sm:scale-90 lg:scale-100 origin-center flex items-center justify-center">
-            {/* Avatar and Rings Container - Everything floats together */}
+            
+            {/* Master Square Container for Perfect Centering */}
             <motion.div
-              className="relative w-[340px] h-[450px] flex items-center justify-center"
-              animate={{
-                y: [0, -12, 0],
-              }}
-              transition={{
-                duration: 6,
-                repeat: Infinity,
-                ease: "easeInOut",
-              }}
+              className="relative w-[350px] h-[350px] flex items-center justify-center"
+              animate={{ y: [0, -12, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             >
-              {/* Glowing Ring Backdrop */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] rounded-full border border-blue-500/20 bg-blue-500/5 animate-pulse -z-10 shadow-[0_0_80px_rgba(59,130,246,0.15)]" />
+              {/* 1. Glowing Ring Backdrop (Perfectly matched to container size) */}
+              <div className="absolute inset-0 rounded-full border border-blue-500/20 bg-blue-500/5 animate-pulse shadow-[0_0_80px_rgba(59,130,246,0.15)]" />
               
-              {/* Orbital Container (slow rotation) */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] pointer-events-none select-none">
-                <motion.div
-                  className="relative w-full h-full flex items-center justify-center"
-                  animate={{ rotate: 360 }}
-                  transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
-                >
-                  {techBadges.map((badge) => {
-                    const radius = 190; // Distance from center
-                    const rad = (badge.angle * Math.PI) / 180;
-                    const x = radius * Math.cos(rad);
-                    const y = radius * Math.sin(rad);
+              {/* 2. Orbital Tech Badges (Spins exactly around the container perimeter) */}
+              <motion.div
+                className="absolute inset-0 pointer-events-none select-none"
+                animate={{ rotate: 360 }}
+                transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
+              >
+                {techBadges.map((badge) => {
+                  const radius = 175; // Exactly half of 350px container
+                  const rad = (badge.angle * Math.PI) / 180;
+                  const x = radius * Math.cos(rad);
+                  const y = radius * Math.sin(rad);
 
-                    return (
-                      <motion.div
-                        key={badge.name}
-                        className="absolute w-12 h-12 rounded-xl glass-panel flex items-center justify-center font-bold text-xs pointer-events-auto cursor-pointer"
-                        style={{
-                          left: `calc(50% + ${x}px - 24px)`,
-                          top: `calc(50% + ${y}px - 24px)`,
-                        }}
-                        whileHover={{ scale: 1.2, borderColor: "rgba(124, 58, 237, 0.5)" }}
-                        // Prevent badge from rotating on its own axis by counter-rotating
-                        animate={{ rotate: -360 }}
-                        transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
-                      >
-                        <span className="text-white text-sm font-semibold">{badge.icon}</span>
-                      </motion.div>
-                    );
-                  })}
-                </motion.div>
-              </div>
+                  return (
+                    <motion.div
+                      key={badge.name}
+                      className="absolute w-12 h-12 rounded-xl glass-panel flex items-center justify-center font-bold text-xs pointer-events-auto cursor-pointer"
+                      style={{
+                        left: `calc(50% + ${x}px - 24px)`,
+                        top: `calc(50% + ${y}px - 24px)`,
+                      }}
+                      whileHover={{ scale: 1.2, borderColor: "rgba(124, 58, 237, 0.5)" }}
+                      animate={{ rotate: -360 }}
+                      transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
+                    >
+                      <span className="text-white text-sm font-semibold">{badge.icon}</span>
+                    </motion.div>
+                  );
+                })}
+              </motion.div>
 
-              {/* Soft Shadow under avatar */}
-              <div className="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-[200px] h-[15px] bg-[#000000]/60 rounded-full blur-[10px] -z-10" />
+              {/* 3. Soft Shadow at bottom */}
+              <div className="absolute -bottom-8 w-[200px] h-[15px] bg-[#000000]/60 rounded-full blur-[10px]" />
 
-              {/* Avatar Image */}
-              <div className="relative w-full h-full flex items-center justify-center -translate-x-8">
+              {/* 4. Avatar Image (Absolutely centered horizontally, slightly taller to overlap ring) */}
+              <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[300px] h-[400px] z-10 pointer-events-none">
                 <Image
                   src="/avatar.png"
                   alt="Muhammad Shumail"
-                  width={340}
-                  height={450}
+                  fill
                   className="object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] filter brightness-[1.05]"
                   priority
                 />

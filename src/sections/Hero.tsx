@@ -4,7 +4,12 @@ import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight, Download, Mail } from "lucide-react";
 import Image from "next/image";
-import HeroThreeCanvas from "../components/HeroThreeCanvas";
+import dynamic from "next/dynamic";
+
+// Dynamically import the heavy 3D canvas so it doesn't block initial page load
+const HeroThreeCanvas = dynamic(() => import("../components/HeroThreeCanvas"), {
+  ssr: false,
+});
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);

@@ -17,12 +17,12 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Muhammad Shumail | Premium Full-Stack JavaScript Engineer",
+  title: "Muhammad Shumail | Full-Stack JavaScript Engineer",
   description: "Specializing in high-performance web applications using React, Next.js, Node.js, Express, and MongoDB. Modern UI/UX portfolio landing page.",
   keywords: ["Full-Stack JavaScript Engineer", "React Developer", "Next.js", "Three.js", "GSAP Animations", "Tailwind CSS", "Muhammad Shumail", "Web Developer Portfolio"],
   authors: [{ name: "Muhammad Shumail" }],
   openGraph: {
-    title: "Muhammad Shumail | Premium Full-Stack JavaScript Engineer",
+    title: "Muhammad Shumail | Full-Stack JavaScript Engineer",
     description: "Specializing in high-performance web applications using React, Next.js, Node.js, Express, and MongoDB.",
     type: "website",
     locale: "en_US",

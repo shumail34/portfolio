@@ -152,9 +152,9 @@ export default function Hero() {
             transform: `translate3d(${mousePosition.x * 0.5}px, ${mousePosition.y * 0.5}px, 0)`,
           }}
         >
-          {/* Avatar and Rings Container - Scales down on mobile automatically */}
+          {/* Avatar and Rings Container - Everything floats together */}
           <motion.div
-            className="relative w-[340px] h-[450px] flex items-center justify-center scale-[0.75] sm:scale-[0.85] lg:scale-100 origin-center"
+            className="relative w-[340px] h-[450px] flex items-center justify-center scale-75 sm:scale-90 lg:scale-100"
             animate={{
               y: [0, -12, 0],
             }}
@@ -164,11 +164,11 @@ export default function Hero() {
               ease: "easeInOut",
             }}
           >
-            {/* Glowing Ring Backdrop - Shifted 10% Right (-40% instead of -50%) to align with the body */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-[40%] -translate-y-1/2 w-[380px] h-[380px] rounded-full border border-blue-500/20 bg-blue-500/5 animate-pulse -z-10 shadow-[0_0_80px_rgba(59,130,246,0.15)]" />
+            {/* Glowing Ring Backdrop */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[380px] h-[380px] rounded-full border border-blue-500/20 bg-blue-500/5 animate-pulse -z-10 shadow-[0_0_80px_rgba(59,130,246,0.15)]" />
             
-            {/* Orbital Container (slow rotation) - Shifted 10% Right */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-[40%] -translate-y-1/2 w-[400px] h-[400px] pointer-events-none select-none">
+            {/* Orbital Container (slow rotation) */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] pointer-events-none select-none">
               <motion.div
                 className="relative w-full h-full flex items-center justify-center"
                 animate={{ rotate: 360 }}
@@ -201,10 +201,10 @@ export default function Hero() {
             </div>
 
             {/* Soft Shadow under avatar */}
-            <div className="absolute bottom-[-10px] left-1/2 -translate-x-[40%] w-[200px] h-[15px] bg-[#000000]/60 rounded-full blur-[10px] -z-10" />
+            <div className="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-[200px] h-[15px] bg-[#000000]/60 rounded-full blur-[10px] -z-10" />
 
             {/* Avatar Image */}
-            <div className="relative w-full h-full flex items-center justify-center">
+            <div className="relative w-full h-full flex items-center justify-center translate-x-4">
               <Image
                 src="/avatar.png"
                 alt="Muhammad Shumail"

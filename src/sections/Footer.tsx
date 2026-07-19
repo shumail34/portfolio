@@ -25,6 +25,8 @@ const VercelIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+import { motion } from "framer-motion";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -36,38 +38,55 @@ export default function Footer() {
     { name: "Email", url: SOCIAL_LINKS.email, icon: <Mail className="w-4 h-4" /> },
   ];
 
-
   return (
-    <footer className="relative py-12 border-t border-white/5 bg-[#070707] z-10">
+    <motion.footer 
+      className="relative py-12 border-t border-white/5 bg-[#070707] z-10"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
         
         {/* Logo Copyright */}
-        <div className="flex flex-col items-center md:items-start gap-2">
+        <motion.div 
+          className="flex flex-col items-center md:items-start gap-2"
+          initial={{ opacity: 0, x: -20 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
           <div className="font-display text-sm font-bold text-white">
             MShumail<span className="text-primary-color">.</span>
           </div>
           <p className="text-[11px] text-muted-text">
             &copy; {currentYear} Muhammad Shumail. All rights reserved.
           </p>
-        </div>
+        </motion.div>
 
         {/* Social Icons */}
         <div className="flex items-center gap-4">
-          {socialLinks.map((social) => (
-            <a
+          {socialLinks.map((social, i) => (
+            <motion.a
               key={social.name}
               href={social.url}
               target="_blank"
               rel="noopener noreferrer"
               className="p-2.5 rounded-full bg-white/5 border border-white/10 text-muted-text hover:text-white hover:bg-white/10 hover:border-white/20 transition-all duration-300"
               aria-label={social.name}
+              initial={{ opacity: 0, scale: 0.5 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.3 + (i * 0.1) }}
+              whileHover={{ y: -3, scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
             >
               {social.icon}
-            </a>
+            </motion.a>
           ))}
         </div>
 
       </div>
-    </footer>
+    </motion.footer>
   );
 }

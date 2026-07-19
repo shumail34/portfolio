@@ -70,7 +70,7 @@ export default function Hero() {
         >
           {/* Small Badge */}
           <motion.div
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 mb-6 rounded-full border border-blue-500/30 bg-blue-500/10 text-xs font-semibold text-blue-400 glow-primary"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 mb-6 rounded-full border border-blue-500/30 bg-blue-500/10 text-[10px] sm:text-xs font-semibold text-blue-400 glow-primary"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -80,7 +80,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Large Title */}
-          <h1 className="font-display text-6xl sm:text-7xl xl:text-8xl font-black tracking-tight leading-none mb-6 overflow-hidden">
+          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-none mb-4 sm:mb-6 overflow-hidden">
             <motion.span 
               className="text-white block"
               initial={{ y: 100, opacity: 0 }}
@@ -101,7 +101,7 @@ export default function Hero() {
 
           {/* Tagline / Subtitle */}
           <motion.p 
-            className="text-muted-text text-lg sm:text-xl font-medium max-w-xl mb-10 leading-relaxed"
+            className="text-muted-text text-base sm:text-lg lg:text-xl font-medium max-w-xl mb-8 sm:mb-10 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
@@ -111,14 +111,14 @@ export default function Hero() {
 
           {/* CTA Buttons */}
           <motion.div 
-            className="flex flex-wrap gap-4 w-full sm:w-auto"
+            className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 w-full"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5, ease: [0.16, 1, 0.3, 1] }}
           >
             <button
               onClick={() => handleScrollTo("projects")}
-              className="relative px-8 py-4 rounded-full font-bold text-sm bg-gradient-to-r from-accent-color to-primary-color text-white shadow-lg shadow-accent-color/20 hover:opacity-95 transition-opacity inline-flex items-center gap-2 cursor-pointer group interactive-card"
+              className="relative w-full sm:w-auto justify-center px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm bg-gradient-to-r from-accent-color to-primary-color text-white shadow-lg shadow-accent-color/20 hover:opacity-95 transition-opacity inline-flex items-center gap-2 cursor-pointer group interactive-card"
             >
               View Projects
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -126,7 +126,7 @@ export default function Hero() {
 
             <button
               onClick={() => handleScrollTo("contact")}
-              className="px-8 py-4 rounded-full font-bold text-sm text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all inline-flex items-center gap-2 cursor-pointer interactive-card"
+              className="w-full sm:w-auto justify-center px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all inline-flex items-center gap-2 cursor-pointer interactive-card"
             >
               <Mail className="w-4 h-4" />
               Contact Me
@@ -134,7 +134,7 @@ export default function Hero() {
 
             <button
               onClick={() => window.dispatchEvent(new CustomEvent("open-resume"))}
-              className="px-8 py-4 rounded-full font-bold text-sm text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all inline-flex items-center gap-2 cursor-pointer interactive-card"
+              className="w-full sm:w-auto justify-center px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all inline-flex items-center gap-2 cursor-pointer interactive-card"
             >
               <Download className="w-4 h-4" />
               Resume
@@ -206,7 +206,7 @@ export default function Hero() {
               <div className="absolute bottom-[-10px] left-1/2 -translate-x-1/2 w-[200px] h-[15px] bg-[#000000]/60 rounded-full blur-[10px] -z-10" />
 
               {/* Avatar Image */}
-              <div className="relative w-full h-full flex items-center justify-center translate-x-4">
+              <div className="relative w-full h-full flex items-center justify-center -translate-x-8">
                 <Image
                   src="/avatar.png"
                   alt="Muhammad Shumail"

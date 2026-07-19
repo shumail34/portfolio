@@ -1,12 +1,10 @@
 import React from "react";
 import Navbar from "@/components/Navbar";
-import dynamic from "next/dynamic";
 import SmoothScroll from "@/components/SmoothScroll";
 import Hero from "@/sections/Hero";
 
-// Dynamically import heavy canvas and modal components to reduce initial payload
-const CinematicBackground = dynamic(() => import("@/components/CinematicBackground"), { ssr: false });
-const ResumeModal = dynamic(() => import("@/components/ResumeModal"), { ssr: false });
+import CinematicBackground from "@/components/CinematicBackground";
+import ResumeModal from "@/components/ResumeModal";
 import About from "@/sections/About";
 import Skills from "@/sections/Skills";
 import Projects from "@/sections/Projects";

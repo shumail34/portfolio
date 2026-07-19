@@ -24,9 +24,6 @@ export default function HeroThreeCanvas() {
         <pointLight position={[10, 10, 10]} intensity={1.5} color="#7C3AED" />
         <pointLight position={[-10, -10, -10]} intensity={1} color="#3B82F6" />
         
-        {/* Glow Ring */}
-        <GlowingRing />
-        
         {/* Floating geometric particles */}
         <FloatingParticles count={120} />
         
@@ -34,33 +31,6 @@ export default function HeroThreeCanvas() {
         <GlassShapes />
       </Canvas>
     </div>
-  );
-}
-
-// 3D Glowing Torus Ring
-function GlowingRing() {
-  const ringRef = useRef<THREE.Mesh>(null);
-
-  useFrame((state) => {
-    if (!ringRef.current) return;
-    const t = state.clock.getElapsedTime();
-    ringRef.current.rotation.x = t * 0.1;
-    ringRef.current.rotation.y = t * 0.15;
-    ringRef.current.position.y = Math.sin(t * 0.5) * 0.15;
-  });
-
-  return (
-    <mesh ref={ringRef} position={[0, 0, 0]}>
-      <torusGeometry args={[2.5, 0.03, 16, 100]} />
-      <meshStandardMaterial
-        color="#3B82F6"
-        emissive="#3B82F6"
-        emissiveIntensity={4}
-        roughness={0.1}
-        metalness={0.9}
-        wireframe
-      />
-    </mesh>
   );
 }
 

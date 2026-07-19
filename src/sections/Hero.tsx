@@ -34,18 +34,6 @@ export default function Hero() {
     window.dispatchEvent(event);
   };
 
-  // Orbiting Technology Badges configurations
-  const techBadges = [
-    { name: "React", icon: "⚛️", angle: 0 },
-    { name: "Next.js", icon: "▲", angle: 45 },
-    { name: "Node.js", icon: "🟢", angle: 90 },
-    { name: "MongoDB", icon: "🍃", angle: 135 },
-    { name: "Tailwind", icon: "🌊", angle: 180 },
-    { name: "TypeScript", icon: "TS", angle: 225 },
-    { name: "JavaScript", icon: "JS", angle: 270 },
-    { name: "GitHub", icon: "🐙", angle: 315 },
-  ];
-
   return (
     <section
       id="home"
@@ -142,7 +130,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* RIGHT COLUMN: Interactive Avatar with orbiting tech and glowing rings */}
+        {/* RIGHT COLUMN: Interactive Avatar only */}
         <motion.div
           className="lg:col-span-5 flex justify-center items-center relative min-h-[400px] lg:min-h-[500px] mt-12 lg:mt-0"
           initial={{ opacity: 0, scale: 0.9 }}
@@ -155,50 +143,17 @@ export default function Hero() {
           {/* Responsive Scale Wrapper for Mobile */}
           <div className="scale-75 sm:scale-90 lg:scale-100 origin-center flex items-center justify-center">
             
-            {/* Master Square Container for Perfect Centering */}
+            {/* Avatar Container */}
             <motion.div
-              className="relative w-[350px] h-[350px] flex items-center justify-center"
+              className="relative w-[300px] h-[400px] flex items-center justify-center"
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             >
-              {/* 1. Glowing Ring Backdrop (Perfectly matched to container size) */}
-              <div className="absolute inset-0 rounded-full border border-blue-500/20 bg-blue-500/5 animate-pulse shadow-[0_0_80px_rgba(59,130,246,0.15)]" />
-              
-              {/* 2. Orbital Tech Badges (Spins exactly around the container perimeter) */}
-              <motion.div
-                className="absolute inset-0 pointer-events-none select-none"
-                animate={{ rotate: 360 }}
-                transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
-              >
-                {techBadges.map((badge) => {
-                  const radius = 175; // Exactly half of 350px container
-                  const rad = (badge.angle * Math.PI) / 180;
-                  const x = radius * Math.cos(rad);
-                  const y = radius * Math.sin(rad);
-
-                  return (
-                    <motion.div
-                      key={badge.name}
-                      className="absolute w-12 h-12 rounded-xl glass-panel flex items-center justify-center font-bold text-xs pointer-events-auto cursor-pointer"
-                      style={{
-                        left: `calc(50% + ${x}px - 24px)`,
-                        top: `calc(50% + ${y}px - 24px)`,
-                      }}
-                      whileHover={{ scale: 1.2, borderColor: "rgba(124, 58, 237, 0.5)" }}
-                      animate={{ rotate: -360 }}
-                      transition={{ repeat: Infinity, duration: 40, ease: "linear" }}
-                    >
-                      <span className="text-white text-sm font-semibold">{badge.icon}</span>
-                    </motion.div>
-                  );
-                })}
-              </motion.div>
-
-              {/* 3. Soft Shadow at bottom */}
+              {/* Soft Shadow at bottom */}
               <div className="absolute -bottom-8 w-[200px] h-[15px] bg-[#000000]/60 rounded-full blur-[10px]" />
 
-              {/* 4. Avatar Image (Absolutely centered horizontally, slightly taller to overlap ring) */}
-              <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 w-[300px] h-[400px] z-10 pointer-events-none">
+              {/* Avatar Image */}
+              <div className="absolute inset-0 z-10 pointer-events-none">
                 <Image
                   src="/avatar.png"
                   alt="Muhammad Shumail"

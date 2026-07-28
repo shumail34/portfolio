@@ -106,7 +106,7 @@ export default function Hero() {
           >
             <button
               onClick={() => handleScrollTo("projects")}
-              className="relative w-full sm:w-auto justify-center px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm bg-gradient-to-r from-accent-color to-primary-color text-black shadow-lg shadow-white/20 hover:opacity-95 transition-opacity inline-flex items-center gap-2 cursor-pointer group interactive-card"
+              className="relative w-full sm:w-auto justify-center px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-500/25 hover:opacity-95 transition-opacity inline-flex items-center gap-2 cursor-pointer group interactive-card"
             >
               View Projects
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -150,14 +150,16 @@ export default function Hero() {
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             >
               {/* Subtle Floor Glow */}
-              <div className="absolute -bottom-6 w-[280px] h-[20px] bg-blue-500/30 rounded-full blur-[16px]" />
+              <div className="absolute -bottom-6 w-[300px] h-[24px] bg-blue-500/40 rounded-full blur-[20px]" />
 
-              {/* Direct HTML Image with cache busting query parameter */}
-              <img
-                src="/avatar.png?v=2"
-                alt="Muhammad Shumail - Full-Stack Engineer & CTO"
-                className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_35px_rgba(59,130,246,0.35)]"
-              />
+              {/* Direct HTML Image with Radial Mask for seamless background blending */}
+              <div className="relative w-full h-full [mask-image:radial-gradient(ellipse_at_center,_black_70%,_transparent_100%)]">
+                <img
+                  src="/avatar.png?v=2"
+                  alt="Muhammad Shumail - Full-Stack Engineer & CTO"
+                  className="w-full h-full object-contain relative z-10 filter brightness-[1.03] contrast-[1.02] drop-shadow-[0_0_40px_rgba(59,130,246,0.4)]"
+                />
+              </div>
             </motion.div>
           </div>
         </motion.div>

@@ -21,8 +21,8 @@ export default function HeroThreeCanvas() {
     <div className="absolute inset-0 -z-10 pointer-events-none">
       <Canvas camera={{ position: [0, 0, 6], fov: 60 }} dpr={[1, 2]}>
         <ambientLight intensity={0.4} />
-        <pointLight position={[10, 10, 10]} intensity={1.5} color="#FFFFFF" />
-        <pointLight position={[-10, -10, -10]} intensity={1} color="#A1A1AA" />
+        <pointLight position={[10, 10, 10]} intensity={1.5} color="#38BDF8" />
+        <pointLight position={[-10, -10, -10]} intensity={1} color="#3B82F6" />
         
         {/* Floating geometric particles */}
         <FloatingParticles count={120} />
@@ -60,7 +60,7 @@ function FloatingParticles({ count }: { count: number }) {
     <Points ref={pointsRef} positions={positions} stride={3}>
       <PointMaterial
         transparent
-        color="#FFFFFF"
+        color="#38BDF8"
         size={0.06}
         sizeAttenuation={true}
         depthWrite={false}
@@ -93,7 +93,7 @@ function GlassShapes() {
       <mesh position={[-2, 1.8, -1]} scale={[0.4, 0.4, 0.4]}>
         <torusGeometry args={[1, 0.3, 16, 32]} />
         <meshPhysicalMaterial
-          color="#FAFAFA"
+          color="#38BDF8"
           roughness={0.1}
           transmission={0.9}
           thickness={0.5}
@@ -106,7 +106,7 @@ function GlassShapes() {
       <mesh position={[2, -1.8, 0.5]} scale={[0.5, 0.5, 0.5]}>
         <tetrahedronGeometry args={[1]} />
         <meshPhysicalMaterial
-          color="#A1A1AA"
+          color="#3B82F6"
           roughness={0.2}
           transmission={0.85}
           thickness={0.8}

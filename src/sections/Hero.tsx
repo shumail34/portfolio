@@ -132,7 +132,7 @@ export default function Hero() {
 
         {/* RIGHT COLUMN: Futuristic CTO Avatar */}
         <motion.div
-          className="lg:col-span-5 flex justify-center items-center relative min-h-[500px] lg:min-h-[680px] mt-12 lg:mt-0"
+          className="lg:col-span-5 flex justify-center items-center relative min-h-[450px] sm:min-h-[550px] lg:min-h-[680px] mt-12 lg:mt-0"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -141,27 +141,23 @@ export default function Hero() {
           }}
         >
           {/* Responsive Scale Wrapper for Mobile */}
-          <div className="scale-80 sm:scale-90 lg:scale-100 origin-bottom flex items-end justify-center">
+          <div className="scale-90 sm:scale-95 lg:scale-100 origin-bottom flex items-end justify-center">
             
             {/* Avatar Container tuned for 2:3 ratio composite image */}
             <motion.div
-              className="relative w-[380px] h-[570px] lg:w-[420px] lg:h-[630px] flex items-center justify-center"
+              className="relative w-[320px] h-[480px] sm:w-[380px] sm:h-[570px] lg:w-[420px] lg:h-[630px] flex items-center justify-center"
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             >
               {/* Subtle Floor Glow */}
               <div className="absolute -bottom-6 w-[280px] h-[20px] bg-blue-500/30 rounded-full blur-[16px]" />
 
-              {/* Avatar Image with smooth edge blending */}
-              <div className="absolute inset-0 z-10 pointer-events-none">
-                <Image
-                  src="/avatar.png"
-                  alt="Muhammad Shumail - Full-Stack Engineer & CTO"
-                  fill
-                  className="object-contain drop-shadow-[0_0_35px_rgba(59,130,246,0.3)]"
-                  priority
-                />
-              </div>
+              {/* Direct HTML Image with cache busting query parameter */}
+              <img
+                src="/avatar.png?v=2"
+                alt="Muhammad Shumail - Full-Stack Engineer & CTO"
+                className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_35px_rgba(59,130,246,0.35)]"
+              />
             </motion.div>
           </div>
         </motion.div>

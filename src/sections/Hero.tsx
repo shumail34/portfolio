@@ -132,7 +132,7 @@ export default function Hero() {
 
         {/* RIGHT COLUMN: Interactive Avatar only */}
         <motion.div
-          className="lg:col-span-5 flex justify-center items-center relative min-h-[400px] lg:min-h-[500px] mt-12 lg:mt-0"
+          className="lg:col-span-5 flex justify-center items-center relative min-h-[500px] lg:min-h-[650px] mt-12 lg:mt-0"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -141,16 +141,16 @@ export default function Hero() {
           }}
         >
           {/* Responsive Scale Wrapper for Mobile */}
-          <div className="scale-75 sm:scale-90 lg:scale-100 origin-center flex items-center justify-center">
+          <div className="scale-75 sm:scale-90 lg:scale-100 origin-bottom flex items-end justify-center">
             
-            {/* Avatar Container */}
+            {/* Avatar Container (Taller for full-body image) */}
             <motion.div
-              className="relative w-[300px] h-[400px] flex items-center justify-center"
+              className="relative w-[340px] h-[550px] lg:h-[650px] flex items-center justify-center"
               animate={{ y: [0, -12, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             >
               {/* Soft Shadow at bottom */}
-              <div className="absolute -bottom-8 w-[200px] h-[15px] bg-[#000000]/60 rounded-full blur-[10px]" />
+              <div className="absolute -bottom-4 w-[220px] h-[15px] bg-[#000000]/80 rounded-full blur-[12px]" />
 
               {/* Avatar Image */}
               <div className="absolute inset-0 z-10 pointer-events-none">
@@ -158,7 +158,7 @@ export default function Hero() {
                   src="/avatar.png"
                   alt="Muhammad Shumail"
                   fill
-                  className="object-contain drop-shadow-[0_15px_30px_rgba(0,0,0,0.8)] filter brightness-[1.05]"
+                  className="object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] filter brightness-[1.05]"
                   priority
                 />
               </div>

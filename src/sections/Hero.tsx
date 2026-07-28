@@ -136,7 +136,7 @@ export default function Hero() {
 
         {/* RIGHT COLUMN: Compact & Blended CTO Avatar */}
         <motion.div
-          className="lg:col-span-5 flex justify-center items-center relative min-h-[380px] sm:min-h-[450px] lg:min-h-[540px] mt-8 lg:mt-0"
+          className="lg:col-span-5 flex justify-center items-center relative min-h-[320px] sm:min-h-[400px] lg:min-h-[480px] mt-6 lg:mt-0"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -147,14 +147,14 @@ export default function Hero() {
           {/* Responsive Scale Wrapper */}
           <div className="scale-95 lg:scale-100 origin-bottom flex items-end justify-center">
             
-            {/* Avatar Container with Compact Proportions */}
+            {/* Shorter Avatar Container */}
             <motion.div
-              className="relative w-[280px] h-[420px] sm:w-[320px] sm:h-[480px] lg:w-[360px] lg:h-[540px] flex items-center justify-center"
+              className="relative w-[240px] h-[360px] sm:w-[280px] sm:h-[420px] lg:w-[320px] lg:h-[460px] flex items-center justify-center"
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             >
               {/* Soft Floor Shadow */}
-              <div className="absolute -bottom-4 w-[240px] h-[16px] bg-white/10 rounded-full blur-[16px]" />
+              <div className="absolute -bottom-4 w-[220px] h-[14px] bg-white/10 rounded-full blur-[14px]" />
 
               {/* Seamless Background Blend: Mix-blend-screen + Radial Mask removes all black box edges */}
               <div className="relative w-full h-full mix-blend-screen [mask-image:radial-gradient(ellipse_at_center,_black_70%,_transparent_98%)]">

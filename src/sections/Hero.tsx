@@ -149,19 +149,19 @@ export default function Hero() {
             
             {/* Shorter Avatar Container */}
             <motion.div
-              className="relative w-[240px] h-[360px] sm:w-[280px] sm:h-[420px] lg:w-[320px] lg:h-[460px] flex items-center justify-center"
+              className="relative w-[200px] h-[280px] sm:w-[240px] sm:h-[320px] lg:w-[260px] lg:h-[360px] flex items-center justify-center mt-4"
               animate={{ y: [0, -8, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             >
               {/* Soft Floor Shadow */}
-              <div className="absolute -bottom-4 w-[220px] h-[14px] bg-white/10 rounded-full blur-[14px]" />
+              <div className="absolute -bottom-2 w-[180px] h-[10px] bg-white/10 rounded-full blur-[12px]" />
 
-              {/* Seamless Background Blend: Mix-blend-screen + Radial Mask removes all black box edges */}
-              <div className="relative w-full h-full mix-blend-screen [mask-image:radial-gradient(ellipse_at_center,_black_70%,_transparent_98%)]">
+              {/* Seamless Background Blend: Mix-blend-screen + aggressive mask & contrast to remove non-pure black backgrounds */}
+              <div className="relative w-full h-full mix-blend-screen [mask-image:radial-gradient(ellipse_at_center,black_45%,transparent_75%)]">
                 <img
-                  src="/avatar.png?v=2"
+                  src="/avatar.png?v=3"
                   alt="Muhammad Shumail - Full-Stack Engineer & CTO"
-                  className="w-full h-full object-contain relative z-10 filter brightness-[1.05] contrast-[1.05]"
+                  className="w-full h-full object-contain relative z-10 filter contrast-[1.25] brightness-[1.1]"
                 />
               </div>
             </motion.div>

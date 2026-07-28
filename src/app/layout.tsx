@@ -18,14 +18,44 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "Muhammad Shumail | Full-Stack JavaScript Engineer",
-  description: "Specializing in high-performance web applications using React, Next.js, Node.js, Express, and MongoDB. Modern UI/UX portfolio landing page.",
-  keywords: ["Full-Stack JavaScript Engineer", "React Developer", "Next.js", "Three.js", "GSAP Animations", "Tailwind CSS", "Muhammad Shumail", "Web Developer Portfolio"],
-  authors: [{ name: "Muhammad Shumail" }],
+  description: "Specializing in high-performance web applications using React, Next.js, Node.js, Express, and MongoDB. View my projects and contact me for freelance opportunities.",
+  keywords: ["Full-Stack Engineer", "JavaScript", "React Developer", "Next.js", "Node.js", "Three.js", "UI/UX", "Muhammad Shumail", "Web Developer Portfolio"],
+  authors: [{ name: "Muhammad Shumail", url: "https://shumail-portfolio.vercel.app" }],
+  creator: "Muhammad Shumail",
+  publisher: "Muhammad Shumail",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
   openGraph: {
     title: "Muhammad Shumail | Full-Stack JavaScript Engineer",
     description: "Specializing in high-performance web applications using React, Next.js, Node.js, Express, and MongoDB.",
-    type: "website",
+    url: "https://shumail-portfolio.vercel.app", // Adjust to final domain
+    siteName: "Muhammad Shumail Portfolio",
+    images: [
+      {
+        url: "/avatar.png",
+        width: 800,
+        height: 600,
+        alt: "Muhammad Shumail",
+      },
+    ],
     locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Muhammad Shumail | Full-Stack JavaScript Engineer",
+    description: "High-performance web applications using React, Next.js, Node.js.",
+    creator: "@shumail", // Adjust to actual twitter handle if needed
+    images: ["/avatar.png"],
   },
 };
 

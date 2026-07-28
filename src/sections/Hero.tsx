@@ -153,12 +153,18 @@ export default function Hero() {
               <div className="absolute -bottom-4 w-[220px] h-[15px] bg-[#000000]/80 rounded-full blur-[12px]" />
 
               {/* Avatar Image */}
-              <div className="absolute inset-0 z-10 pointer-events-none">
+              <div 
+                className="absolute inset-0 z-10 pointer-events-none"
+                style={{
+                  WebkitMaskImage: "radial-gradient(circle at 50% 50%, black 60%, transparent 100%)",
+                  maskImage: "radial-gradient(circle at 50% 50%, black 60%, transparent 100%)"
+                }}
+              >
                 <Image
                   src="/avatar.png"
                   alt="Muhammad Shumail"
                   fill
-                  className="object-contain drop-shadow-[0_20px_40px_rgba(0,0,0,0.6)] filter brightness-[1.05]"
+                  className="object-contain"
                   priority
                 />
               </div>

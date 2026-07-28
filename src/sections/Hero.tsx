@@ -38,16 +38,16 @@ export default function Hero() {
     <section
       id="home"
       ref={containerRef}
-      className="relative min-h-screen flex items-center justify-center pt-24 overflow-hidden"
+      className="relative py-20 lg:py-24 overflow-hidden flex items-center justify-center"
     >
       {/* 3D WebGL Torus and Particle Canvas */}
       <HeroThreeCanvas />
 
       {/* Subtle Monochromatic Lighting Blobs */}
-      <div className="absolute top-[20%] right-[8%] w-[450px] h-[450px] bg-white/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
-      <div className="absolute bottom-[15%] left-[5%] w-[350px] h-[350px] bg-zinc-500/5 rounded-full blur-[100px] -z-10 pointer-events-none" />
+      <div className="absolute top-[10%] right-[8%] w-[350px] h-[350px] bg-white/5 rounded-full blur-[100px] -z-10 pointer-events-none" />
+      <div className="absolute bottom-[10%] left-[5%] w-[280px] h-[280px] bg-zinc-500/5 rounded-full blur-[80px] -z-10 pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center z-10">
+      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center z-10">
         
         {/* LEFT COLUMN: Texts and CTA */}
         <motion.div
@@ -58,7 +58,7 @@ export default function Hero() {
         >
           {/* Small Badge */}
           <motion.div
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 mb-6 rounded-full border border-white/15 bg-white/5 text-[10px] sm:text-xs font-semibold text-zinc-300"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 mb-4 sm:mb-6 rounded-full border border-white/15 bg-white/5 text-[10px] sm:text-xs font-semibold text-zinc-300"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
@@ -68,7 +68,7 @@ export default function Hero() {
           </motion.div>
 
           {/* Large Title */}
-          <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-black tracking-tight leading-none mb-4 sm:mb-6 overflow-hidden">
+          <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-none mb-3 sm:mb-5 overflow-hidden">
             <motion.span 
               className="text-white block"
               initial={{ y: 100, opacity: 0 }}
@@ -89,7 +89,7 @@ export default function Hero() {
 
           {/* Tagline / Subtitle */}
           <motion.p 
-            className="text-muted-text text-base sm:text-lg lg:text-xl font-medium max-w-xl mb-8 sm:mb-10 leading-relaxed"
+            className="text-muted-text text-sm sm:text-base lg:text-lg font-medium max-w-xl mb-6 sm:mb-8 leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
@@ -106,7 +106,7 @@ export default function Hero() {
           >
             <button
               onClick={() => handleScrollTo("projects")}
-              className="relative w-full sm:w-auto justify-center px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm bg-white text-black hover:bg-zinc-200 transition-all shadow-md shadow-white/10 inline-flex items-center gap-2 cursor-pointer group interactive-card"
+              className="relative w-full sm:w-auto justify-center px-7 py-3 rounded-full font-bold text-sm bg-white text-black hover:bg-zinc-200 transition-all shadow-md shadow-white/10 inline-flex items-center gap-2 cursor-pointer group interactive-card"
             >
               View Projects
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -114,7 +114,7 @@ export default function Hero() {
 
             <button
               onClick={() => handleScrollTo("contact")}
-              className="w-full sm:w-auto justify-center px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm text-white bg-white/5 border border-white/15 hover:bg-white/10 transition-all inline-flex items-center gap-2 cursor-pointer interactive-card"
+              className="w-full sm:w-auto justify-center px-7 py-3 rounded-full font-bold text-sm text-white bg-white/5 border border-white/15 hover:bg-white/10 transition-all inline-flex items-center gap-2 cursor-pointer interactive-card"
             >
               <Mail className="w-4 h-4" />
               Contact Me
@@ -122,7 +122,7 @@ export default function Hero() {
 
             <button
               onClick={() => window.dispatchEvent(new CustomEvent("open-resume"))}
-              className="w-full sm:w-auto justify-center px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm text-white bg-white/5 border border-white/15 hover:bg-white/10 transition-all inline-flex items-center gap-2 cursor-pointer interactive-card"
+              className="w-full sm:w-auto justify-center px-7 py-3 rounded-full font-bold text-sm text-white bg-white/5 border border-white/15 hover:bg-white/10 transition-all inline-flex items-center gap-2 cursor-pointer interactive-card"
             >
               <Download className="w-4 h-4" />
               Resume
@@ -130,9 +130,9 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* RIGHT COLUMN: Futuristic CTO Avatar */}
+        {/* RIGHT COLUMN: Compact & Blended CTO Avatar */}
         <motion.div
-          className="lg:col-span-5 flex justify-center items-center relative min-h-[450px] sm:min-h-[550px] lg:min-h-[680px] mt-12 lg:mt-0"
+          className="lg:col-span-5 flex justify-center items-center relative min-h-[380px] sm:min-h-[450px] lg:min-h-[540px] mt-8 lg:mt-0"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -140,24 +140,24 @@ export default function Hero() {
             transform: `translate3d(${mousePosition.x * 0.5}px, ${mousePosition.y * 0.5}px, 0)`,
           }}
         >
-          {/* Responsive Scale Wrapper for Mobile */}
-          <div className="scale-90 sm:scale-95 lg:scale-100 origin-bottom flex items-end justify-center">
+          {/* Responsive Scale Wrapper */}
+          <div className="scale-95 lg:scale-100 origin-bottom flex items-end justify-center">
             
-            {/* Avatar Container tuned for 2:3 ratio composite image */}
+            {/* Avatar Container with Compact Proportions */}
             <motion.div
-              className="relative w-[320px] h-[480px] sm:w-[380px] sm:h-[570px] lg:w-[420px] lg:h-[630px] flex items-center justify-center"
-              animate={{ y: [0, -10, 0] }}
+              className="relative w-[280px] h-[420px] sm:w-[320px] sm:h-[480px] lg:w-[360px] lg:h-[540px] flex items-center justify-center"
+              animate={{ y: [0, -8, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             >
               {/* Soft Floor Shadow */}
-              <div className="absolute -bottom-6 w-[280px] h-[20px] bg-white/10 rounded-full blur-[20px]" />
+              <div className="absolute -bottom-4 w-[240px] h-[16px] bg-white/10 rounded-full blur-[16px]" />
 
-              {/* Direct HTML Image with Radial Mask for ultra-clean background blending */}
-              <div className="relative w-full h-full [mask-image:radial-gradient(ellipse_at_center,_black_75%,_transparent_100%)]">
+              {/* Seamless Background Blend: Mix-blend-screen + Radial Mask removes all black box edges */}
+              <div className="relative w-full h-full mix-blend-screen [mask-image:radial-gradient(ellipse_at_center,_black_70%,_transparent_98%)]">
                 <img
                   src="/avatar.png?v=2"
                   alt="Muhammad Shumail - Full-Stack Engineer & CTO"
-                  className="w-full h-full object-contain relative z-10 filter brightness-[1.02] contrast-[1.02] drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
+                  className="w-full h-full object-contain relative z-10 filter brightness-[1.05] contrast-[1.05]"
                 />
               </div>
             </motion.div>

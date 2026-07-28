@@ -69,7 +69,7 @@ export default function Contact() {
             transition={{ duration: 0.8 }}
           >
             Let&apos;s Build <br className="sm:hidden" />
-            <span className="text-gradient-purple-blue glow-text-accent">Something Amazing.</span>
+            <span className="text-gradient-primary glow-text-accent">Something Amazing.</span>
           </motion.h2>
 
           {/* Subtitle */}

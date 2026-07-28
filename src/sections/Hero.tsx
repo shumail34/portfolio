@@ -44,8 +44,8 @@ export default function Hero() {
       <HeroThreeCanvas />
 
       {/* Lighting blobs */}
-      <div className="absolute top-[20%] right-[10%] w-[350px] h-[350px] bg-blue-500/20 rounded-full blur-[80px] -z-10 pointer-events-none" />
-      <div className="absolute bottom-[20%] left-[10%] w-[300px] h-[300px] bg-purple-500/10 rounded-full blur-[80px] -z-10 pointer-events-none" />
+      <div className="absolute top-[20%] right-[10%] w-[350px] h-[350px] bg-emerald-500/20 rounded-full blur-[80px] -z-10 pointer-events-none" />
+      <div className="absolute bottom-[20%] left-[10%] w-[300px] h-[300px] bg-teal-500/10 rounded-full blur-[80px] -z-10 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center z-10">
         
@@ -58,12 +58,12 @@ export default function Hero() {
         >
           {/* Small Badge */}
           <motion.div
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 mb-6 rounded-full border border-blue-500/30 bg-blue-500/10 text-[10px] sm:text-xs font-semibold text-blue-400 glow-primary"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 mb-6 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-[10px] sm:text-xs font-semibold text-emerald-400 glow-primary"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
             Full-Stack JavaScript Engineer
           </motion.div>
 
@@ -78,7 +78,7 @@ export default function Hero() {
               Muhammad
             </motion.span>
             <motion.span 
-              className="text-gradient-purple-blue glow-text-accent block mt-1"
+              className="text-gradient-primary glow-text-accent block mt-1"
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}

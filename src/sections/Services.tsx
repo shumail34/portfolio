@@ -32,7 +32,7 @@ export default function Services() {
   return (
     <section id="services" className="relative py-32 overflow-hidden border-t border-white/5 bg-[#0a0a0a]/30">
       {/* Lights background */}
-      <div className="absolute top-[30%] left-[20%] w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[100px] -z-10 pointer-events-none" />
+      <div className="absolute top-[30%] left-[20%] w-[400px] h-[400px] bg-teal-500/5 rounded-full blur-[100px] -z-10 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full z-10 relative">
         

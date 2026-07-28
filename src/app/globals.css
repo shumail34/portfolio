@@ -6,8 +6,8 @@
   --color-card: #111111;
   --color-secondary-bg: #171717;
   --color-muted-text: #A1A1AA;
-  --color-primary-color: #3B82F6;
-  --color-accent-color: #7C3AED;
+  --color-primary-color: #10B981;
+  --color-accent-color: #0D9488;
   
   --font-display: var(--font-outfit), sans-serif;
   --font-body: var(--font-plus-jakarta), sans-serif;
@@ -63,24 +63,24 @@ body {
 
 /* Premium glows */
 .glow-primary {
-  box-shadow: 0 0 50px -10px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 50px -10px rgba(16, 185, 129, 0.25);
 }
 
 .glow-accent {
-  box-shadow: 0 0 50px -10px rgba(124, 58, 237, 0.3);
+  box-shadow: 0 0 50px -10px rgba(13, 148, 136, 0.25);
 }
 
 .glow-text-primary {
-  text-shadow: 0 0 20px rgba(59, 130, 246, 0.4);
+  text-shadow: 0 0 20px rgba(16, 185, 129, 0.4);
 }
 
 .glow-text-accent {
-  text-shadow: 0 0 20px rgba(124, 58, 237, 0.4);
+  text-shadow: 0 0 20px rgba(13, 148, 136, 0.4);
 }
 
 /* Text Gradients */
-.text-gradient-purple-blue {
-  background: linear-gradient(135deg, #7C3AED 0%, #3B82F6 100%);
+.text-gradient-primary {
+  background: linear-gradient(135deg, #0D9488 0%, #10B981 100%);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -125,14 +125,14 @@ html.lenis {
 }
 
 .bg-blob-blue {
-  background: #3B82F6;
+  background: #10B981;
   width: 600px;
   height: 600px;
   animation: floatBlob1 25s ease-in-out infinite alternate;
 }
 
 .bg-blob-purple {
-  background: #7C3AED;
+  background: #0D9488;
   width: 500px;
   height: 500px;
   animation: floatBlob2 30s ease-in-out infinite alternate;

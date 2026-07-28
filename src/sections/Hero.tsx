@@ -2,7 +2,7 @@
 
 import React, { useRef, useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Mail } from "lucide-react";
+import { ArrowRight, Download, Mail, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
@@ -56,16 +56,20 @@ export default function Hero() {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
         >
-          {/* Small Badge */}
-          <motion.div
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 mb-4 sm:mb-6 rounded-full border border-white/15 bg-white/5 text-[10px] sm:text-xs font-semibold text-zinc-300"
+          {/* CTO @ A&S Solution Badge Link */}
+          <motion.a
+            href="https://www.a-s-solution.online/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 px-4 py-1.5 mb-4 sm:mb-6 rounded-full border border-white/15 bg-white/5 text-[10px] sm:text-xs font-semibold text-zinc-300 hover:bg-white/10 hover:border-white/30 hover:text-white transition-all cursor-pointer group"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-            Full-Stack JavaScript Engineer & CTO
-          </motion.div>
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span>CTO @ <strong className="text-white underline decoration-white/30 group-hover:decoration-white transition-colors">A&S Solution</strong></span>
+            <ExternalLink className="w-3.5 h-3.5 text-zinc-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+          </motion.a>
 
           {/* Large Title */}
           <h1 className="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-black tracking-tight leading-none mb-3 sm:mb-5 overflow-hidden">

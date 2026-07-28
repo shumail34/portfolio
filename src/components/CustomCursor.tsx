@@ -81,10 +81,12 @@ export default function CustomCursor() {
     <>
       {/* Primary ring cursor */}
       <motion.div
-        className="fixed top-0 left-0 w-6 h-6 border border-white rounded-full pointer-events-none z-50 mix-blend-screen"
+        ref={cursorOutline}
+        className="fixed top-0 left-0 w-6 h-6 border border-white/40 rounded-full pointer-events-none z-50 mix-blend-screen"
         style={{
           x: cursorXSpring,
           y: cursorYSpring,
+          transform: "translate(-50%, -50%)",
           scale: isHovered ? 1.8 : 1,
           borderColor: isHovered ? "white" : "white",
           backgroundColor: isHovered ? "white" : "transparent",
@@ -93,13 +95,13 @@ export default function CustomCursor() {
       />
       {/* Inner dot cursor */}
       <motion.div
+        ref={cursorDot}
         className="fixed top-0 left-0 w-2.5 h-2.5 bg-white rounded-full pointer-events-none z-50 mix-blend-screen"
         style={{
           x: dotXSpring,
           y: dotYSpring,
+          transform: "translate(-50%, -50%)",
           scale: isHovered ? 0 : 1,
-          left: 7,
-          top: 7,
         }}
       />
     </>

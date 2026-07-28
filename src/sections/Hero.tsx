@@ -43,9 +43,9 @@ export default function Hero() {
       {/* 3D WebGL Torus and Particle Canvas */}
       <HeroThreeCanvas />
 
-      {/* Ambient Lighting Blobs tuned to match the Avatar's Blue Glowing Ring */}
-      <div className="absolute top-[20%] right-[8%] w-[450px] h-[450px] bg-blue-500/20 rounded-full blur-[100px] -z-10 pointer-events-none animate-pulse" />
-      <div className="absolute bottom-[15%] left-[5%] w-[350px] h-[350px] bg-cyan-500/15 rounded-full blur-[90px] -z-10 pointer-events-none" />
+      {/* Subtle Monochromatic Lighting Blobs */}
+      <div className="absolute top-[20%] right-[8%] w-[450px] h-[450px] bg-white/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
+      <div className="absolute bottom-[15%] left-[5%] w-[350px] h-[350px] bg-zinc-500/5 rounded-full blur-[100px] -z-10 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center z-10">
         
@@ -58,12 +58,12 @@ export default function Hero() {
         >
           {/* Small Badge */}
           <motion.div
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 mb-6 rounded-full border border-blue-500/30 bg-blue-500/10 text-[10px] sm:text-xs font-semibold text-blue-400 glow-primary"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 mb-6 rounded-full border border-white/15 bg-white/5 text-[10px] sm:text-xs font-semibold text-zinc-300"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
             Full-Stack JavaScript Engineer & CTO
           </motion.div>
 
@@ -78,7 +78,7 @@ export default function Hero() {
               Muhammad
             </motion.span>
             <motion.span 
-              className="text-gradient-primary glow-text-accent block mt-1"
+              className="text-gradient-primary block mt-1"
               initial={{ y: 100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ duration: 1, delay: 0.25, ease: [0.16, 1, 0.3, 1] }}
@@ -97,7 +97,7 @@ export default function Hero() {
             Building scalable web applications with modern technologies.
           </motion.p>
 
-          {/* CTA Buttons */}
+          {/* CTA Buttons - Vercel / Apple Minimalist */}
           <motion.div 
             className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 w-full"
             initial={{ opacity: 0, y: 20 }}
@@ -106,7 +106,7 @@ export default function Hero() {
           >
             <button
               onClick={() => handleScrollTo("projects")}
-              className="relative w-full sm:w-auto justify-center px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm bg-gradient-to-r from-blue-600 to-cyan-500 text-white shadow-lg shadow-blue-500/25 hover:opacity-95 transition-opacity inline-flex items-center gap-2 cursor-pointer group interactive-card"
+              className="relative w-full sm:w-auto justify-center px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm bg-white text-black hover:bg-zinc-200 transition-all shadow-md shadow-white/10 inline-flex items-center gap-2 cursor-pointer group interactive-card"
             >
               View Projects
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -114,7 +114,7 @@ export default function Hero() {
 
             <button
               onClick={() => handleScrollTo("contact")}
-              className="w-full sm:w-auto justify-center px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all inline-flex items-center gap-2 cursor-pointer interactive-card"
+              className="w-full sm:w-auto justify-center px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm text-white bg-white/5 border border-white/15 hover:bg-white/10 transition-all inline-flex items-center gap-2 cursor-pointer interactive-card"
             >
               <Mail className="w-4 h-4" />
               Contact Me
@@ -122,7 +122,7 @@ export default function Hero() {
 
             <button
               onClick={() => window.dispatchEvent(new CustomEvent("open-resume"))}
-              className="w-full sm:w-auto justify-center px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm text-white bg-white/5 border border-white/10 hover:bg-white/10 hover:border-white/20 transition-all inline-flex items-center gap-2 cursor-pointer interactive-card"
+              className="w-full sm:w-auto justify-center px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm text-white bg-white/5 border border-white/15 hover:bg-white/10 transition-all inline-flex items-center gap-2 cursor-pointer interactive-card"
             >
               <Download className="w-4 h-4" />
               Resume
@@ -149,15 +149,15 @@ export default function Hero() {
               animate={{ y: [0, -10, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             >
-              {/* Subtle Floor Glow */}
-              <div className="absolute -bottom-6 w-[300px] h-[24px] bg-blue-500/40 rounded-full blur-[20px]" />
+              {/* Soft Floor Shadow */}
+              <div className="absolute -bottom-6 w-[280px] h-[20px] bg-white/10 rounded-full blur-[20px]" />
 
-              {/* Direct HTML Image with Radial Mask for seamless background blending */}
-              <div className="relative w-full h-full [mask-image:radial-gradient(ellipse_at_center,_black_70%,_transparent_100%)]">
+              {/* Direct HTML Image with Radial Mask for ultra-clean background blending */}
+              <div className="relative w-full h-full [mask-image:radial-gradient(ellipse_at_center,_black_75%,_transparent_100%)]">
                 <img
                   src="/avatar.png?v=2"
                   alt="Muhammad Shumail - Full-Stack Engineer & CTO"
-                  className="w-full h-full object-contain relative z-10 filter brightness-[1.03] contrast-[1.02] drop-shadow-[0_0_40px_rgba(59,130,246,0.4)]"
+                  className="w-full h-full object-contain relative z-10 filter brightness-[1.02] contrast-[1.02] drop-shadow-[0_20px_50px_rgba(0,0,0,0.8)]"
                 />
               </div>
             </motion.div>

@@ -43,9 +43,9 @@ export default function Hero() {
       {/* 3D WebGL Torus and Particle Canvas */}
       <HeroThreeCanvas />
 
-      {/* Lighting blobs */}
-      <div className="absolute top-[20%] right-[10%] w-[350px] h-[350px] bg-white/5 rounded-full blur-[80px] -z-10 pointer-events-none" />
-      <div className="absolute bottom-[20%] left-[10%] w-[300px] h-[300px] bg-zinc-500/10 rounded-full blur-[80px] -z-10 pointer-events-none" />
+      {/* Ambient Lighting Blobs tuned to match the Avatar's Blue Glowing Ring */}
+      <div className="absolute top-[20%] right-[8%] w-[450px] h-[450px] bg-blue-500/20 rounded-full blur-[100px] -z-10 pointer-events-none animate-pulse" />
+      <div className="absolute bottom-[15%] left-[5%] w-[350px] h-[350px] bg-cyan-500/15 rounded-full blur-[90px] -z-10 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center z-10">
         
@@ -58,13 +58,13 @@ export default function Hero() {
         >
           {/* Small Badge */}
           <motion.div
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 mb-6 rounded-full border border-white/20 bg-white/5 text-[10px] sm:text-xs font-semibold text-zinc-300 glow-primary"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 mb-6 rounded-full border border-blue-500/30 bg-blue-500/10 text-[10px] sm:text-xs font-semibold text-blue-400 glow-primary"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
-            Full-Stack JavaScript Engineer
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-400 animate-pulse" />
+            Full-Stack JavaScript Engineer & CTO
           </motion.div>
 
           {/* Large Title */}
@@ -130,9 +130,9 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* RIGHT COLUMN: Interactive Avatar only */}
+        {/* RIGHT COLUMN: Futuristic CTO Avatar */}
         <motion.div
-          className="lg:col-span-5 flex justify-center items-center relative min-h-[500px] lg:min-h-[650px] mt-12 lg:mt-0"
+          className="lg:col-span-5 flex justify-center items-center relative min-h-[500px] lg:min-h-[680px] mt-12 lg:mt-0"
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
@@ -141,30 +141,24 @@ export default function Hero() {
           }}
         >
           {/* Responsive Scale Wrapper for Mobile */}
-          <div className="scale-75 sm:scale-90 lg:scale-100 origin-bottom flex items-end justify-center">
+          <div className="scale-80 sm:scale-90 lg:scale-100 origin-bottom flex items-end justify-center">
             
-            {/* Avatar Container (Taller for full-body image) */}
+            {/* Avatar Container tuned for 2:3 ratio composite image */}
             <motion.div
-              className="relative w-[340px] h-[550px] lg:h-[650px] flex items-center justify-center"
-              animate={{ y: [0, -12, 0] }}
+              className="relative w-[380px] h-[570px] lg:w-[420px] lg:h-[630px] flex items-center justify-center"
+              animate={{ y: [0, -10, 0] }}
               transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
             >
-              {/* Soft Shadow at bottom */}
-              <div className="absolute -bottom-4 w-[220px] h-[15px] bg-[#000000]/80 rounded-full blur-[12px]" />
+              {/* Subtle Floor Glow */}
+              <div className="absolute -bottom-6 w-[280px] h-[20px] bg-blue-500/30 rounded-full blur-[16px]" />
 
-              {/* Avatar Image */}
-              <div 
-                className="absolute inset-0 z-10 pointer-events-none"
-                style={{
-                  WebkitMaskImage: "radial-gradient(circle at 50% 50%, black 60%, transparent 100%)",
-                  maskImage: "radial-gradient(circle at 50% 50%, black 60%, transparent 100%)"
-                }}
-              >
+              {/* Avatar Image with smooth edge blending */}
+              <div className="absolute inset-0 z-10 pointer-events-none">
                 <Image
                   src="/avatar.png"
-                  alt="Muhammad Shumail"
+                  alt="Muhammad Shumail - Full-Stack Engineer & CTO"
                   fill
-                  className="object-contain"
+                  className="object-contain drop-shadow-[0_0_35px_rgba(59,130,246,0.3)]"
                   priority
                 />
               </div>

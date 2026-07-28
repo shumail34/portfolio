@@ -44,8 +44,8 @@ export default function Hero() {
       <HeroThreeCanvas />
 
       {/* Lighting blobs */}
-      <div className="absolute top-[20%] right-[10%] w-[350px] h-[350px] bg-emerald-500/20 rounded-full blur-[80px] -z-10 pointer-events-none" />
-      <div className="absolute bottom-[20%] left-[10%] w-[300px] h-[300px] bg-teal-500/10 rounded-full blur-[80px] -z-10 pointer-events-none" />
+      <div className="absolute top-[20%] right-[10%] w-[350px] h-[350px] bg-white/5 rounded-full blur-[80px] -z-10 pointer-events-none" />
+      <div className="absolute bottom-[20%] left-[10%] w-[300px] h-[300px] bg-zinc-500/10 rounded-full blur-[80px] -z-10 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center z-10">
         
@@ -58,12 +58,12 @@ export default function Hero() {
         >
           {/* Small Badge */}
           <motion.div
-            className="inline-flex items-center gap-1.5 px-4 py-1.5 mb-6 rounded-full border border-emerald-500/30 bg-emerald-500/10 text-[10px] sm:text-xs font-semibold text-emerald-400 glow-primary"
+            className="inline-flex items-center gap-1.5 px-4 py-1.5 mb-6 rounded-full border border-white/20 bg-white/5 text-[10px] sm:text-xs font-semibold text-zinc-300 glow-primary"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
           >
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+            <span className="w-1.5 h-1.5 rounded-full bg-white animate-pulse" />
             Full-Stack JavaScript Engineer
           </motion.div>
 
@@ -106,7 +106,7 @@ export default function Hero() {
           >
             <button
               onClick={() => handleScrollTo("projects")}
-              className="relative w-full sm:w-auto justify-center px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm bg-gradient-to-r from-accent-color to-primary-color text-white shadow-lg shadow-accent-color/20 hover:opacity-95 transition-opacity inline-flex items-center gap-2 cursor-pointer group interactive-card"
+              className="relative w-full sm:w-auto justify-center px-8 py-3.5 sm:py-4 rounded-full font-bold text-sm bg-gradient-to-r from-accent-color to-primary-color text-black shadow-lg shadow-white/20 hover:opacity-95 transition-opacity inline-flex items-center gap-2 cursor-pointer group interactive-card"
             >
               View Projects
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />

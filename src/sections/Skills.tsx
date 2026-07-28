@@ -27,12 +27,12 @@ export default function Skills() {
     { name: "Next.js", icon: <Terminal className="w-6 h-6 text-white" />, glow: "hover:shadow-white/10" },
     { name: "Node.js", icon: <Server className="w-6 h-6 text-green-500" />, glow: "hover:shadow-green-500/20" },
     { name: "Express.js", icon: <Layers className="w-6 h-6 text-neutral-400" />, glow: "hover:shadow-neutral-400/20" },
-    { name: "MongoDB", icon: <Database className="w-6 h-6 text-emerald-500" />, glow: "hover:shadow-emerald-500/20" },
-    { name: "TypeScript", icon: <Code className="w-6 h-6 text-emerald-500" />, glow: "hover:shadow-emerald-500/20" },
+    { name: "MongoDB", icon: <Database className="w-6 h-6 text-white" />, glow: "hover:shadow-white/20" },
+    { name: "TypeScript", icon: <Code className="w-6 h-6 text-zinc-300" />, glow: "hover:shadow-zinc-300/20" },
     { name: "Tailwind CSS", icon: <Layout className="w-6 h-6 text-cyan-400" />, glow: "hover:shadow-cyan-400/20" },
     { name: "Git", icon: <GitBranch className="w-6 h-6 text-orange-500" />, glow: "hover:shadow-orange-500/20" },
-    { name: "GitHub", icon: <GithubIcon className="w-6 h-6 text-teal-400" />, glow: "hover:shadow-teal-500/20" },
-    { name: "REST API", icon: <Globe className="w-6 h-6 text-teal-400" />, glow: "hover:shadow-teal-500/20" },
+    { name: "GitHub", icon: <GithubIcon className="w-6 h-6 text-white" />, glow: "hover:shadow-white/20" },
+    { name: "REST API", icon: <Globe className="w-6 h-6 text-zinc-300" />, glow: "hover:shadow-zinc-300/20" },
   ];
 
   return (

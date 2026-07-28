@@ -81,19 +81,19 @@ export default function CustomCursor() {
     <>
       {/* Primary ring cursor */}
       <motion.div
-        className="fixed top-0 left-0 w-6 h-6 border border-teal-500 rounded-full pointer-events-none z-50 mix-blend-screen"
+        className="fixed top-0 left-0 w-6 h-6 border border-white rounded-full pointer-events-none z-50 mix-blend-screen"
         style={{
           x: cursorXSpring,
           y: cursorYSpring,
           scale: isHovered ? 1.8 : 1,
-          borderColor: isHovered ? "rgba(59, 130, 246, 0.8)" : "rgba(124, 58, 237, 0.8)",
-          backgroundColor: isHovered ? "rgba(59, 130, 246, 0.1)" : "rgba(0,0,0,0)",
+          borderColor: isHovered ? "white" : "white",
+          backgroundColor: isHovered ? "white" : "transparent",
         }}
         transition={{ type: "tween", ease: "backOut", duration: 0.2 }}
       />
       {/* Inner dot cursor */}
       <motion.div
-        className="fixed top-0 left-0 w-2.5 h-2.5 bg-emerald-500 rounded-full pointer-events-none z-50 mix-blend-screen"
+        className="fixed top-0 left-0 w-2.5 h-2.5 bg-white rounded-full pointer-events-none z-50 mix-blend-screen"
         style={{
           x: dotXSpring,
           y: dotYSpring,
